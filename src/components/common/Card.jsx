@@ -17,8 +17,8 @@ const Card = ({ data }) => {
     <>
       {!loading ?
         <div
-          className='overflow-hidden rounded-md duration-500 border-2 border-transparent
-            md:border-emerald-300 relative group md:group-hover:shadow-md cursor-pointer'
+          className='overflow-hidden rounded-md duration-500 border-2
+            border-emerald-300 relative group md:group-hover:shadow-md cursor-pointer'
           onClick={() => navigate(`/comic/${data.id}`)}>
           <div className='flex gap-1 absolute font-semibold top-0 inset-x-0 z-10 text-xs text-white'>
             {data?.is_trending && <span className='bg-rose-500 py-0.5 px-2 rounded-b-sm first:rounded-bl-none'>Hot</span>}
@@ -27,7 +27,7 @@ const Card = ({ data }) => {
           </div>
           <div className='relative'>
             <img src={data?.thumbnail} alt={data?.title}
-              className='w-full aspect-[2/3] object-cover object-center scale-[1.01] group-hover:scale-105
+              className='w-[190px] mx-auto aspect-[2/3] object-cover object-center scale-[1.01] group-hover:scale-105
               duration-300 origin-bottom select-none' loading='lazy'/>
           </div>
           <div className='absolute top-1/2 bottom-0 inset-x-0 flex flex-col justify-end
